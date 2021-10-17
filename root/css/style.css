@@ -106,7 +106,7 @@ ul {
 .social li:last-child::after {
 	content: '';
 }
-.social a {
+.social a:link, .social a:visited {
 	color: var(--accent);
 }
 
@@ -119,6 +119,10 @@ ul {
 p {
 	font-size: 1rem; 
 	line-height:1.4rem;
+}
+
+p a:link, p a:visited {
+	color: var(--medium);
 }
 
 p a:hover {
