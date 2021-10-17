@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;600&display=swap');
+
+:root {
+	--accent: #E49200;
+	--dark: #210e2a;
+	--light: #e4e1e6;
+	--medium: #5e376f;
+	--mediumlight: #A473B9;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+	font-size: 10px;
+	font-family: 'Roboto Mono', monospace;
+	color: var(--dark);
+	background: rgb(33,14,42);
+	background: linear-gradient(90deg, rgba(33,14,42,1) 20%, rgba(228,225,230,1) 20%);
+	display:flex;
+	justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+#particleContainer {
+	flex-basis:20%;
+	flex-grow:0;
+	overflow:hidden;
+	z-index:5;
+}
+
+.content {
+	font-size: 1.3rem;
+	line-height: 2.5rem;
+	color:var(--medium);
+	display: flex;
+	flex-basis: 80%;
+	flex-grow: 0;
+	flex-direction:column;
+	align-items:left;
+	padding-left: 5rem;
+	justify-content:center;
+	align-content:center;
+}
+
+h2 {
+	display:inline-block;
+	font-size: 5rem;
+	line-height: 8rem;
+	margin: 0 0 2rem 0;
+	text-transform:uppercase;
+	font-weight:600;
+	color: var(--mediumlight);
+	position: relative;
+}
+
+@keyframes uncover {
+	0%   {width:100%;}
+	100% {width:0;}
+}
+
+h2 span {
+	position: absolute;
+	top:0;
+	right: 0;
+	display:block;
+	width: 0;
+	height: 100%;
+	background-color: var(--light);
+	animation-name: uncover;
+	animation-duration: 1s;
+	z-index:9999;
+  } 
+
+h3 {
+	font-size: 2rem;
+	line-height: 3.5rem;
+	font-weight:400;
+	margin: 0 0 2rem 0;
+}
+
+h3 strong {
+	font-weight:600;
+}
+
+ul {
+	list-style-type:none;
+	margin:0 0 2rem 0;
+	padding:0;
+}
+
+.about svg {
+	margin-right:1rem;
+}
+
+.social li {
+	display:inline-block;
+}
+
+.social li::after {
+	content: ' / ';	
+}
+.social li:last-child::after {
+	content: '';
+}
+.social a {
+	color: var(--accent);
+}
+
+.social a:hover {
+	text-decoration:none;
+	color: var(--light);
+	background-color: var(--accent);
+}
+
+p {
+	font-size: 1rem; 
+	line-height:1.4rem;
+}
+
+p a:hover {
+	text-decoration:none;
+	color: var(--light);
+	background-color: var(--medium);
+}
+
+a:active {
+	background-color: var(--dark);
+}
+
