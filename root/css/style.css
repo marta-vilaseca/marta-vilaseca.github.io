@@ -12,13 +12,12 @@ html, body {
     height: 100%;
     margin: 0;
 }
-
+ 
 body {
 	font-size: 10px;
 	font-family: 'Roboto Mono', monospace;
 	color: var(--dark);
-	background: rgb(33,14,42);
-	background: linear-gradient(90deg, rgba(33,14,42,1) 20%, rgba(228,225,230,1) 20%);
+	background-color: var(--light);
 	display:flex;
 	justify-content: flex-start;
     align-items: stretch;
@@ -26,30 +25,18 @@ body {
 }
 
 #particleContainer {
-	flex-basis:20%;
-	flex-grow:0;
-	overflow:hidden;
-	z-index:5;
+	background-color:var(--dark);
 }
 
 .content {
-	font-size: 1.3rem;
-	line-height: 2.5rem;
 	color:var(--medium);
 	display: flex;
-	flex-basis: 80%;
-	flex-grow: 0;
 	flex-direction:column;
 	align-items:left;
-	padding-left: 5rem;
-	justify-content:center;
-	align-content:center;
 }
 
 h2 {
 	display:inline-block;
-	font-size: 5rem;
-	line-height: 8rem;
 	margin: 0 0 2rem 0;
 	text-transform:uppercase;
 	font-weight:600;
@@ -76,8 +63,6 @@ h2 span {
   } 
 
 h3 {
-	font-size: 2rem;
-	line-height: 3.5rem;
 	font-weight:400;
 	margin: 0 0 2rem 0;
 }
@@ -135,3 +120,79 @@ a:active {
 	background-color: var(--dark);
 }
 
+@media only screen and (max-width:480px) {
+	body {
+		flex-direction:column;
+	}
+	#particleContainer {
+		flex-basis: auto; 
+		height:100px;
+	}
+	.content {
+		flex-basis: auto; 
+		padding:2rem; 
+		justify-content:top; 
+		align-content:left; 
+		font-size: 1.2rem; 
+		line-height: 2rem;
+	}
+	h2 {
+		font-size: 4rem; 
+		line-height: 5rem;
+	}
+	h3 {
+		font-size: 1.5rem; 
+		line-height: 2.8rem;
+	}
+}
+
+@media only screen and (min-width:481px) and (max-width:768px) {
+	#particleContainer {
+		flex-basis:20%; 
+		flex-grow:0; 
+		overflow:hidden; 
+		z-index:5;
+	}
+	.content {
+		flex-basis: 80%; 
+		flex-grow: 0;
+		justify-content:center;
+		align-content:center;
+		padding: 0 1rem 0 2rem; 
+		font-size: 1.2rem;
+		line-height: 2.3rem;
+	}
+	h2 {
+		font-size: 3.5rem;
+		line-height: 5rem;
+	}
+	h3 {
+		font-size: 1.4rem;
+		line-height: 3rem;
+	}
+}
+
+@media only screen and (min-width:769px) {
+	#particleContainer {
+		flex-basis:20%;
+		flex-grow:0;
+		overflow:hidden;
+		z-index:5;
+	}
+	.content {
+		flex-basis: 80%;
+		flex-grow: 0;
+		justify-content:center;
+		align-content:center;
+		padding: 0 0 0 5rem; font-size: 1.3rem;
+		line-height: 2.5rem;
+	}
+	h2 {
+		font-size: 5rem;
+		line-height: 6rem;
+	}
+	h3 {
+		font-size: 2rem;
+		line-height: 3.5rem;
+	}
+}
