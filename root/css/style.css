@@ -133,17 +133,22 @@ a:active {
 		padding:2rem; 
 		justify-content:top; 
 		align-content:left; 
-		font-size: 1.2rem; 
+		font-size: 1.1rem; 
 		line-height: 2rem;
 	}
 	h2 {
-		font-size: 4rem; 
+		font-size: 3rem; 
 		line-height: 5rem;
 	}
 	h3 {
-		font-size: 1.5rem; 
-		line-height: 2.8rem;
+		font-size: 1.3rem; 
+		line-height: 2.5rem;
 	}
+	h3 strong::after {
+		content: "\a";
+		white-space: pre;
+	}
+	.about li {text-indent:-2.8rem; padding-left:2.8rem;}
 }
 
 @media only screen and (min-width:481px) and (max-width:768px) {
@@ -170,6 +175,7 @@ a:active {
 		font-size: 1.4rem;
 		line-height: 3rem;
 	}
+	.about li {text-indent:-2.8rem; padding-left:2.8rem;}
 }
 
 @media only screen and (min-width:769px) {
