@@ -173,7 +173,7 @@ a:active {
 }
 */
 
-@media only screen and (min-width:501px) and (max-width:768px) {
+@media only screen and (min-width:501px) and (max-width:800px) {
 	#particleContainer {
 		flex-basis:20%; 
 		flex-grow:0; 
@@ -200,7 +200,7 @@ a:active {
 	.about li {text-indent:-2.8rem; padding-left:2.8rem;}
 }
 
-@media only screen and (min-width:769px) {
+@media only screen and (min-width:801px) {
 	#particleContainer {
 		flex-basis:20%;
 		flex-grow:0;
@@ -215,7 +215,7 @@ a:active {
 	}
 }
 
-@media only screen and (min-width:769px) and (max-height:620px) {
+@media only screen and (min-width:801px) and (max-height:620px) {
 	.content {
 		padding: 0 0 0 5rem; font-size: 1.2rem;
 		line-height: 2rem;
@@ -230,7 +230,7 @@ a:active {
 	}
 }
 
-@media only screen and (min-width:769px) and (min-height:620px) {
+@media only screen and (min-width:801px) and (min-height:620px) {
 	.content {
 		padding: 0 0 0 5rem; font-size: 1.3rem;
 		line-height: 2.5rem;
