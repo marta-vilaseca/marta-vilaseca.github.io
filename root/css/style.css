@@ -9,19 +9,21 @@
 }
 
 html, body {
-    height: 100%;
     margin: 0;
 }
  
 body {
+	overflow: hidden;
+	height: 100vh;
 	font-size: 10px;
 	font-family: 'Roboto Mono', monospace;
 	color: var(--dark);
 	background-color: var(--light);
+}
+
+.wrapper {
 	display:flex;
-	justify-content: flex-start;
-    align-items: stretch;
-    align-content: stretch;
+	height: 100%;
 }
 
 #particleContainer {
@@ -29,9 +31,16 @@ body {
 }
 
 .content {
-	color:var(--medium);
+	overflow-y: auto;
+	color:var(--medium);	
+}
+
+.wrapper_inner {
 	display: flex;
+	min-height: 100%; 
+	height: auto;
 	flex-direction:column;
+	justify-content: center;
 	align-items:left;
 }
 
@@ -120,13 +129,16 @@ a:active {
 	background-color: var(--dark);
 }
 
-@media only screen and (max-width:480px) {
-	body {
-		flex-direction:column;
+
+
+
+
+@media only screen and (max-width:500px) {
+	.wrapper {
+		flex-direction: column;
 	}
 	#particleContainer {
-		flex-basis: auto; 
-		height:100px;
+		height: 100px;
 	}
 	.content {
 		flex-basis: auto; 
@@ -151,7 +163,17 @@ a:active {
 	.about li {text-indent:-2.8rem; padding-left:2.8rem;}
 }
 
-@media only screen and (min-width:481px) and (max-width:768px) {
+/*@media (min-width: 481px) {
+	#particleContainer {
+		flex-basis: 10%;
+	} 
+	.content {
+		flex-basis: 90%;
+	}
+}
+*/
+
+@media only screen and (min-width:501px) and (max-width:768px) {
 	#particleContainer {
 		flex-basis:20%; 
 		flex-grow:0; 
@@ -190,6 +212,26 @@ a:active {
 		flex-grow: 0;
 		justify-content:center;
 		align-content:center;
+	}
+}
+
+@media only screen and (min-width:769px) and (max-height:620px) {
+	.content {
+		padding: 0 0 0 5rem; font-size: 1.2rem;
+		line-height: 2rem;
+	}
+	h2 {
+		font-size: 4rem;
+		line-height: 5rem;
+	}
+	h3 {
+		font-size: 2rem;
+		line-height: 3rem;
+	}
+}
+
+@media only screen and (min-width:769px) and (min-height:620px) {
+	.content {
 		padding: 0 0 0 5rem; font-size: 1.3rem;
 		line-height: 2.5rem;
 	}
